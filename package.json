@@ -1,14 +1,24 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "stripe": "^14.0.0",
-    "cors": "^2.8.5"
+  "paymentIntentId": "pi_xxxxx",
+  "orderPayload": {
+    "data": {
+      "selected_offers": ["off_xxxxx"],
+      "passengers": [
+        {
+          "given_name": "John",
+          "family_name": "Doe",
+          "born_on": "1998-01-01",
+          "email": "john@example.com",
+          "phone_number": "+17875551234",
+          "title": "mr",
+          "gender": "m"
+        }
+      ],
+      "payments": {
+        "type": "balance",
+        "amount": "123.45",
+        "currency": "USD"
+      }
+    }
   }
 }
